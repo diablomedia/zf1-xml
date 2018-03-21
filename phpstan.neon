@@ -1,0 +1,4 @@
+parameters:
+    ignoreErrors:
+        - '#Variable \$loadEntities might not be defined\.#'
+        - '#Variable \$useInternalXmlErrors might not be defined\.#'
