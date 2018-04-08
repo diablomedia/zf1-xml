@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Zend_": "src/"
+            "Zend_Xml_": "src/"
         }
     },
     "autoload-dev": {
