@@ -80,11 +80,11 @@ class Zend_Xml_Security
 
         if (null === $dom) {
             $simpleXml = true;
-            $dom = new DOMDocument();
+            $dom       = new DOMDocument();
         }
 
         if (!self::isPhpFpm()) {
-            $loadEntities = libxml_disable_entity_loader(true);
+            $loadEntities         = libxml_disable_entity_loader(true);
             $useInternalXmlErrors = libxml_use_internal_errors(true);
         }
 
@@ -270,7 +270,7 @@ class Zend_Xml_Security
         $quote       = call_user_func($generator, '"');
         $close       = call_user_func($generator, '>');
 
-        $closePos    = strpos($xml, $close);
+        $closePos = strpos($xml, $close);
         if (false === $closePos) {
             return array($fileEncoding);
         }
@@ -282,7 +282,7 @@ class Zend_Xml_Security
             return array($fileEncoding);
         }
 
-        $encPos   += strlen($encAttr);
+        $encPos += strlen($encAttr);
         $quotePos = strpos($xml, $quote, $encPos);
         if (false === $quotePos) {
             return array($fileEncoding);

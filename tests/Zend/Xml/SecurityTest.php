@@ -74,7 +74,7 @@ XML;
 
     public function testScanDom()
     {
-        $dom = new DOMDocument('1.0');
+        $dom    = new DOMDocument('1.0');
         $result = Zend_Xml_Security::scan($this->_getXml(), $dom);
         $this->assertTrue($result instanceof DOMDocument);
         $node = $result->getElementsByTagName('result')->item(0);
@@ -97,7 +97,7 @@ XML;
 <foo>test</bar>
 XML;
 
-        $dom = new DOMDocument('1.0');
+        $dom    = new DOMDocument('1.0');
         $result = Zend_Xml_Security::scan($xml, $dom);
         $this->assertFalse($result);
     }
@@ -126,7 +126,7 @@ XML;
 </results>
 XML;
 
-        $dom = new DOMDocument('1.0');
+        $dom    = new DOMDocument('1.0');
         $result = Zend_Xml_Security::scan($xml, $dom);
         $this->assertTrue($result instanceof DOMDocument);
         $this->assertTrue($result->validate());
@@ -140,6 +140,5 @@ XML;
     <result>test</result>
 </results>
 XML;
-
     }
 }
