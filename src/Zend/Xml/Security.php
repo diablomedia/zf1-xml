@@ -146,7 +146,7 @@ class Zend_Xml_Security
                 "The file $file specified doesn't exist"
             );
         }
-        return self::scan(file_get_contents($file), $dom);
+        return self::scan((string) file_get_contents($file), $dom);
     }
 
     /**
@@ -406,7 +406,7 @@ class Zend_Xml_Security
      *
      * @internal
      * @param string $ascii
-     * @return string
+     * @return string|null
      */
     public static function encodeToUTF32BE($ascii)
     {
@@ -418,7 +418,7 @@ class Zend_Xml_Security
      *
      * @internal
      * @param string $ascii
-     * @return string
+     * @return string|null
      */
     public static function encodeToUTF32LE($ascii)
     {
@@ -430,7 +430,7 @@ class Zend_Xml_Security
      *
      * @internal
      * @param string $ascii
-     * @return string
+     * @return string|null
      */
     public static function encodeToUTF32odd1($ascii)
     {
@@ -442,7 +442,7 @@ class Zend_Xml_Security
      *
      * @internal
      * @param string $ascii
-     * @return string
+     * @return string|null
      */
     public static function encodeToUTF32odd2($ascii)
     {
@@ -454,7 +454,7 @@ class Zend_Xml_Security
      *
      * @internal
      * @param string $ascii
-     * @return string
+     * @return string|null
      */
     public static function encodeToUTF16BE($ascii)
     {
@@ -466,7 +466,7 @@ class Zend_Xml_Security
      *
      * @internal
      * @param string $ascii
-     * @return string
+     * @return string|null
      */
     public static function encodeToUTF16LE($ascii)
     {
