@@ -108,6 +108,9 @@ class Zend_Xml_Security
         if (!self::isPhpFpm()) {
             foreach ($dom->childNodes as $child) {
                 if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {
+                    /**
+                     * @var DOMDocumentType $child
+                     */
                     if ($child->entities->length > 0) {
                         throw new Zend_Xml_Exception(self::ENTITY_DETECT);
                     }
