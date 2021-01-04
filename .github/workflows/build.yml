@@ -15,6 +15,13 @@ jobs:
                 operating-system: [ubuntu-latest]
                 php-versions: ['7.2', '7.3', '7.4', '8.0']
                 composer-args: ['', '--prefer-lowest']
+                include:
+                    - operating-system: ubuntu-latest
+                      php-versions: '8.0'
+                      composer-args: '--ignore-platform-reqs'
+                    - operating-system: ubuntu-latest
+                      php-versions: '8.0'
+                      composer-args: '--prefer-lowest --ignore-platform-reqs'
         runs-on: ${{ matrix.operating-system }}
         steps:
             - name: Checkout
