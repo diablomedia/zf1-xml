@@ -16,7 +16,7 @@ return PhpCsFixer\Config::create()
         'single_quote'              => true,
         'array_syntax'              => array('syntax' => 'long'),
         'concat_space'              => array('spacing' => 'one'),
-        'psr0'                      => false
+        'psr0'                      => true
     ))
     ->setUsingCache(true)
     ->setFinder($finder);
