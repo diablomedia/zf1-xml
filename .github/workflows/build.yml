@@ -50,8 +50,6 @@ jobs:
             - name: PHPStan
               run: composer phpstan
             - name: Code Style Check
-              env:
-                  PHP_CS_FIXER_IGNORE_ENV: true
               run: composer style-check -- --format=checkstyle | cs2pr
             - name: Test
               run: composer test-with-coverage

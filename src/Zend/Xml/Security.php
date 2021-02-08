@@ -84,7 +84,9 @@ class Zend_Xml_Security
         }
 
         if (!self::isPhpFpm()) {
-            $loadEntities         = libxml_disable_entity_loader(true);
+            if (version_compare(PHP_VERSION, '8.0.0', 'lt')) {
+                $loadEntities = libxml_disable_entity_loader(true);
+            }
             $useInternalXmlErrors = libxml_use_internal_errors(true);
         }
 
@@ -98,7 +100,9 @@ class Zend_Xml_Security
         if (!$result) {
             // Entity load to previous setting
             if (!self::isPhpFpm()) {
-                libxml_disable_entity_loader($loadEntities);
+                if (version_compare(PHP_VERSION, '8.0.0', 'lt')) {
+                    libxml_disable_entity_loader($loadEntities);
+                }
                 libxml_use_internal_errors($useInternalXmlErrors);
             }
             return false;
@@ -120,7 +124,9 @@ class Zend_Xml_Security
 
         // Entity load to previous setting
         if (!self::isPhpFpm()) {
-            libxml_disable_entity_loader($loadEntities);
+            if (version_compare(PHP_VERSION, '8.0.0', 'lt')) {
+                libxml_disable_entity_loader($loadEntities);
+            }
             libxml_use_internal_errors($useInternalXmlErrors);
         }
 
