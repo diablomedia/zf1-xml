@@ -68,7 +68,7 @@ XML;
     public function testScanSimpleXmlResult()
     {
         $result = Zend_Xml_Security::scan($this->_getXml());
-        $this->assertTrue($result instanceof SimpleXMLElement);
+        $this->assertInstanceOf(SimpleXMLElement::class, $result);
         $this->assertEquals((string) $result->result, 'test');
     }
 
@@ -76,7 +76,7 @@ XML;
     {
         $dom    = new DOMDocument('1.0');
         $result = Zend_Xml_Security::scan($this->_getXml(), $dom);
-        $this->assertTrue($result instanceof DOMDocument);
+        $this->assertInstanceOf(DOMDocument::class, $result);
         $node = $result->getElementsByTagName('result')->item(0);
         $this->assertEquals($node->nodeValue, 'test');
     }
@@ -108,7 +108,7 @@ XML;
         file_put_contents($file, $this->_getXml());
 
         $result = Zend_Xml_Security::scanFile($file);
-        $this->assertTrue($result instanceof SimpleXMLElement);
+        $this->assertInstanceOf(SimpleXMLElement::class, $result);
         $this->assertEquals((string) $result->result, 'test');
         unlink($file);
     }
@@ -128,7 +128,7 @@ XML;
 
         $dom    = new DOMDocument('1.0');
         $result = Zend_Xml_Security::scan($xml, $dom);
-        $this->assertTrue($result instanceof DOMDocument);
+        $this->assertInstanceOf(DOMDocument::class, $result);
         $this->assertTrue($result->validate());
     }
 
