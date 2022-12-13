@@ -18,9 +18,9 @@ jobs:
         runs-on: ${{ matrix.operating-system }}
         steps:
             - name: Checkout
-              uses: actions/checkout@v3.0.2
+              uses: actions/checkout@v3.2.0
             - name: Setup PHP
-              uses: shivammathur/setup-php@2.19.1
+              uses: shivammathur/setup-php@2.22.0
               with:
                   php-version: ${{ matrix.php-versions }}
                   extensions: mbstring
