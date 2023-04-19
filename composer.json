@@ -8,14 +8,13 @@
     ],
     "homepage": "http://framework.zend.com/",
     "license": "BSD-3-Clause",
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^7.4 || ~8.0.0 || ~8.1.0 || ~8.2.0",
         "ext-dom": "*",
         "ext-libxml": "*",
         "ext-SimpleXML": "*",
-        "diablomedia/zendframework1-exception": "dev-master as 1.0.0"
+        "diablomedia/zendframework1-exception": "^1.0.0"
     },
     "autoload": {
         "psr-0": {
