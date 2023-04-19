@@ -8,3 +8,5 @@ parameters:
         - %rootDir%/../../../vendor/*
     ignoreErrors:
         - '#Variable \$loadEntities might not be defined\.#'
+includes:
+    - phpstan-php82.php
