@@ -65,11 +65,10 @@ class Zend_Xml_Security
      * Scan XML string for potential XXE and XEE attacks
      *
      * @param   string $xml
-     * @param   DOMDocument $dom
      * @throws  Zend_Xml_Exception
      * @return  SimpleXMLElement|DOMDocument|false
      */
-    public static function scan($xml, DOMDocument $dom = null)
+    public static function scan($xml, DOMDocument|null $dom = null)
     {
         // If running with PHP-FPM we perform an heuristic scan
         // We cannot use libxml_disable_entity_loader because of this bug
@@ -144,11 +143,10 @@ class Zend_Xml_Security
      * Scan XML file for potential XXE/XEE attacks
      *
      * @param  string $file
-     * @param  DOMDocument $dom
      * @throws Zend_Xml_Exception
      * @return SimpleXMLElement|DOMDocument|false
      */
-    public static function scanFile($file, DOMDocument $dom = null)
+    public static function scanFile($file, DOMDocument|null $dom = null)
     {
         if (!file_exists($file)) {
             throw new Zend_Xml_Exception(
