@@ -1,5 +1,4 @@
 parameters:
-    checkMissingIterableValueType: false
     level: 8
     paths:
         - ./
@@ -7,4 +6,6 @@ parameters:
         - %rootDir%/../../../tests/*
         - %rootDir%/../../../vendor/*
     ignoreErrors:
+        -
+            identifier: missingType.iterableValue
         - '#Variable \$loadEntities might not be defined\.#'
