@@ -14,7 +14,7 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "ext-SimpleXML": "*",
-        "diablomedia/zendframework1-exception": "dev-php-85 as 1.1.1"
+        "diablomedia/zendframework1-exception": "^1.1.1"
     },
     "autoload": {
         "psr-0": {
@@ -48,6 +48,5 @@
         "allow-plugins": {
             "phpro/grumphp-shim": true
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
