@@ -5,7 +5,8 @@ parameters:
     excludePaths:
         - %rootDir%/../../../tests/*
         - %rootDir%/../../../vendor/*
+    treatPhpDocTypesAsCertain: false
     ignoreErrors:
         -
             identifier: missingType.iterableValue
-        - '#Variable \$loadEntities might not be defined\.#'
+        - '#Undefined variable: \$loadEntities\.#'
