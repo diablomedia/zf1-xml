@@ -9,4 +9,4 @@ parameters:
     ignoreErrors:
         -
             identifier: missingType.iterableValue
-        - '#Undefined variable: \$loadEntities\.#'
+        - '#Variable \$loadEntities might not be defined.\.#'
