@@ -5,6 +5,7 @@ parameters:
     excludePaths:
         - %rootDir%/../../../tests/*
         - %rootDir%/../../../vendor/*
+    treatPhpDocTypesAsCertain: false
     ignoreErrors:
         -
             identifier: missingType.iterableValue
