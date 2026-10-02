@@ -6,4 +6,7 @@
 [![Total Downloads](https://poser.pugx.org/diablomedia/zendframework1-xml/downloads)](https://packagist.org/packages/diablomedia/zendframework1-xml)
 [![License](https://poser.pugx.org/diablomedia/zendframework1-xml/license)](https://packagist.org/packages/diablomedia/zendframework1-xml)
 
+> [!WARNING]  
+> We've archived this repo as we're no longer using or maintaining Zend Framework 1
+
 This is just the Zend_Xml component extracted from our fork of the Zend Framework 1 repo (https://github.com/diablomedia/zf1).
